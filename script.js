@@ -38,10 +38,18 @@ function createThumbnails() {
     newIMG.height = images[i].height;
     thumbnailContainer.appendChild(newIMG);
     console.log(newIMG);
+
+    newIMG.addEventListener("click", createLargeImage);
+
+    function createLargeImage(lrgIMG) {
+      lrgIMG = document.createElement("img");
+      lrgIMG.src = images[i].src;
+      lrgIMG.alt = images[i].alt;
+      lrgIMG.width = 1200;
+      lrgIMG.height = 600;
+      mainImageContainer.appendChild(lrgIMG);
+      console.log(lrgIMG);
+    }
   }
 }
 createThumbnails();
-
-newIMG.addEventListener("click", eventHandler);
-
-createLargeImage(newIMG[index]);
