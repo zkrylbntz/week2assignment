@@ -1,3 +1,9 @@
 * {
   background-color: aliceblue;
 }
+
+#thumbnail-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
